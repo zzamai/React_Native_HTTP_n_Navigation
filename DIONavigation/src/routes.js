@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Techs from './pages/techs'
+import Techs from './pages/Techs'
 
 const Stack = createStackNavigator();
 
@@ -21,3 +21,5 @@ export default function Routes() {
         </NavigationContainer>
     )
 }
+
+
