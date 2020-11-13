@@ -52,6 +52,10 @@ export default function Techs() {
         navigation.navigate('TechDetails', {tech})
     }
 
+    function navigationsToGoogleSearch(tech) {
+        navigation.navigate('TechGoogleSearch', {tech});
+    }
+
   return (
     <Container>
         <Form>
@@ -77,6 +81,11 @@ export default function Techs() {
             data={techs} keyExtractor={(tech) => tech.id} renderItem={({item}) => (
                 <Tech>
                     <Name>{item.id}</Name>
+                    <ProfileButton
+                        background="#ffc107"
+                        onPress={() => navigationsToGoogleSearch(item)}>
+                        <Icon name="search" size={20} color="#fff"/>
+                    </ProfileButton>
                     <ProfileButton
                         background="#ffc107"
                         onPress={() => navigationToDetail(item)}>
